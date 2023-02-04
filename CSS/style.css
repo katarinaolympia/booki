@@ -1,0 +1,566 @@
+* {
+  /* Propriété permettant d'ajuster les dimensions des blocs */
+  box-sizing: border-box;
+}
+
+#bloc_page {
+  /* Permet d'apporter des dimensions globales à la page */
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* Propriétés globales */
+  font-family: "Raleway", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+/* Style des liens hypertexte */
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Header */
+
+#logo {
+  height: 10%;
+  width: 10%;
+  padding-top: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* permet de séparer les éléments logo et nav ul */
+  align-items: center; /* aligne au centre */
+  font-size: 16px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding: 30px; /* séparer les éléments du menu nav entre-eux */
+  padding-top: 45px; /* séparation du haut de page */
+}
+
+nav li:hover {
+  color: #0065fc;
+  border-top: 2px solid #0065fc;
+}
+
+nav a:hover {
+  color: #0065fc;
+}
+
+/* Main */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#baseline {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+/* Moteur de recherche */
+
+#conteneur_recherche {
+  display: flex;
+  margin-top: 15px;
+  align-content: center;
+}
+
+#icone_location {
+  display: flex;
+  position: relative;
+  width: 51px;
+  height: 51px;
+  font-size: 18px;
+  border: 0.5px solid #f2f2f2;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  margin-top: 0px;
+}
+
+#champ_recherche {
+  display: flex;
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  height: 50px;
+  width: 230px;
+  border: 1px solid #f2f2f2;
+}
+
+button {
+  background: #0065fc;
+  width: 110px;
+  height: 50px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+button span:last-child i {
+  width: 18px;
+  height: 18px;
+  display: none;
+}
+
+::placeholder {
+  /* Texte du champ de recherche */
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+/* Filtres */
+
+#filtres {
+  /* Conteneur principal */
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+}
+
+#titre_filtres {
+  /* Texte */
+  position: relative;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.filtres {
+  /* Blocs des filtres */
+  padding: 0px 20px 10px 0px;
+  border: 2px solid #f2f2f2;
+  display: inline-block; /* Disposition des blocs en alignement sur une même ligne */
+  border-radius: 25px;
+  height: 45px;
+  margin-left: 30px;
+}
+
+.filtres span:first-child {
+  /* Conteneur de l'icone */
+  height: 44px;
+  width: 44px;
+  background: #deebff;
+  border-radius: 50%;
+  position: relative;
+  transform: translate3d(
+    -2px,
+    -1px,
+    0
+  ); /* Permet d'ajuster précisément le conteneur par rapport au conteneur parent*/
+  border: 2px solid #deebff;
+}
+
+.filtres span {
+  /* Conteneur du texte */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filtres span:first-child i {
+  /* Icone */
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #0065fc;
+  transform: translate3d(
+    -9px,
+    -9px,
+    0
+  ); /* Permet d'ajuster précisément dans le conteneur de l'icone */
+}
+
+.filtres span:last-child {
+  /* Texte */
+  margin-left: 7px;
+  transform: translate3d(0, 5px, 0);
+  vertical-align: top;
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+.filtres:hover {
+  background: #0065fc;
+}
+
+/* Informations */
+
+#info {
+  display: flex;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+#info_icone i {
+  border: 3px solid #f2f2f2;
+  border-radius: 50%;
+  background: #0065fc;
+  color: white;
+  font-size: 22px;
+}
+
+#info_texte {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+/* Section */
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Section globale */
+
+#section_globale {
+  display: flex;
+  gap: 30px; /* Ajuste la disposition entre le bloc hébergements et le bloc aside */
+}
+
+/* Section hébergements Marseille*/
+
+#section_hébergements_marseille {
+  padding: 20px 30px 20px 30px; /* Marges intérieures */
+  background: #f2f2f2;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#section_hébergements_marseille #zone_flex {
+  display: flex;
+  flex-wrap: wrap; /* Organise les élements en colonne */
+  gap: 30px; /* Espace entre les éléments */
+}
+
+#zone_flex a {
+  color: #000000;
+  display: block;
+  width: calc(
+    (100% / 3) - 20px
+  ); /* Fonction régulant la largeur des conteneurs */
+  height: 180px;
+  background: #ffffff;
+  padding: 3px;
+  border-radius: 10px;
+  box-shadow: 1px 0px 3px 0px rgba(158, 158, 158, 1);
+  margin-top: 20px;
+}
+
+#zone_flex img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+}
+
+#zone_flex a *:not(img) {
+  /* L'intégralité du conteneur, sauf l'image */
+  margin-left: 10px;
+  display: inline-block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+#zone_flex a span:first-of-type {
+  /* 1ère ligne de texte : nom hébergement */
+  font-weight: 600;
+}
+
+#zone_flex a span:nth-of-type(2) {
+  /* Texte */
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+#zone_flex a div:first-of-type i {
+  /* Étoiles */
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  font-size: 12px;
+}
+
+.etoiles_bleu {
+  color: #0065fc !important;
+}
+
+.etoiles_gris {
+  color: #f2f2f2;
+}
+
+#section_globale p {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+/* Section : hébergements les plus populaires */
+#section_populaires {
+  width: 40%;
+  margin-top: 40px;
+  position: relative;
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 20px 30px 20px 30px;
+}
+
+#section_populaires h2 
+/* Aligne le titre sur une seul ligne */ {
+  display: inline-block;
+}
+
+#section_les_plus_populaires_flex {
+  display: flex;
+  flex-direction: column; /* Ajuste en colonne */
+  gap: 30px; /* Espace entre les blocs */
+}
+
+#icone_chart_line {
+  font-size: 20px;
+  vertical-align: middle;
+  position: absolute;
+  top: 38px;
+  right: 30px;
+}
+
+#section_les_plus_populaires_flex a {
+  /* Contenu du bloc : image, texte et icone */
+  display: flex; /* Alignement horizontal */
+  color: #000000;
+  width: 100%;
+  height: 140px;
+  background: #ffffff;
+  padding: 3px; /* Marge intérieure */
+  border-radius: 10px;
+  box-shadow: 1px 0px 3px 0px rgba(158, 158, 158, 1);
+}
+
+#section_les_plus_populaires_flex a img:first-child 
+/* Propriétés des images */ {
+  width: 40%; /* Taille en % par rapport au bloc */
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+#section_les_plus_populaires_flex a div:first-of-type 
+/* Conteneur texte et icone */ {
+  width: 60%;
+  padding: 10px;
+  position: relative;
+}
+
+#section_les_plus_populaires_flex a div:first-of-type  
+/* Contenu du conteneur  */ * {
+  display: inline-block;
+  width: 100%;
+}
+
+#section_les_plus_populaires_flex a div:first-of-type span:first-child {
+  /* 1ère ligne de texte : nom hébergement */
+  font-weight: 600;
+  font-size: 15px;
+}
+
+#section_les_plus_populaires_flex a span:nth-last-child(2) {
+  /* Texte */
+  font-size: 14px;
+  font-weight: lighter;
+  padding-top: 7px;
+}
+
+#section_les_plus_populaires_flex a div:first-of-type div:last-child {
+  /* Conteneur icone étoile */
+  position: absolute;
+  bottom: 5px;
+  left: 0px; /* Aligne à gauche */
+  padding-bottom: 0px; /* Aligne en bas */
+}
+
+#section_les_plus_populaires_flex a div:first-of-type div:last-child i {
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  font-size: 12px;
+}
+
+/* Effets au survol */
+#zone_flex a:hover {
+  border: 2px solid #f2f2f2;
+}
+
+#section_les_plus_populaires_flex a:hover {
+  border: 2px solid #f2f2f2;
+}
+
+/* Section : activités à Marseille */
+
+#section_activités_marseille {
+  margin-top: 50px;
+}
+
+#activités_marseille_flex {
+  /* Conteneur parent */
+  display: flex;
+  gap: 30px;
+}
+
+#activités_marseille_flex .activités_marseille_flex_child {
+  /* Conteneur parent + enfants */
+  border-radius: 15px;
+  width: calc(100% / 4); /* Alignement largeur en 4 blocs */
+  height: 380px; /* hauteur du conteneur */
+}
+
+.activités_marseille_flex_child:first-child, /* 1ère image */
+.activités_marseille_flex_child:nth-child(3), /* 4ème image */
+.activités_marseille_flex_child:nth-child(2) a:first-child, /* 2ème image */
+.activités_marseille_flex_child:nth-child(2) a:last-child, /* 3ème image */
+.activités_marseille_flex_child:last-child a /* 5ème et 6ème image */ {
+  box-shadow: 1px 0px 3px 0px rgba(158, 158, 158, 1);
+}
+
+.activités_marseille_flex_child img {
+  /* Propriétés des images */
+  width: 100%;
+  height: 86%;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  display: block; /* Organisation en bloc */
+}
+.activités_marseille_flex_child p {
+  /* Texte */
+  font-weight: bold;
+  margin-left: 15px;
+  display: inline-block; /* Alignement en ligne */
+}
+
+.activités_marseille_flex_child:nth-child(2),
+.activités_marseille_flex_child:last-child {
+  /* Colonnes 2 et 4 */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.activités_marseille_flex_child:nth-child(2) a,
+.activités_marseille_flex_child:last-child a {
+  border-radius: 15px;
+}
+
+/* Colonnes 2 et 4 : first child et last child */
+
+.activités_marseille_flex_child a:first-child {
+  /* Images 2 et 5 (conteneur) */
+  height: 51.5%; /* du conteneur */
+}
+
+.activités_marseille_flex_child a:first-child img {
+  /* Image 2 */
+  height: 75% !important;
+}
+
+.activités_marseille_flex_child a:last-child img {
+  /* Image 6 */
+  height: 65% !important;
+}
+
+.activités_marseille_flex_child:nth-child(2) a:last-child {
+  /* Conteneur image 3 */
+  height: 40%;
+}
+
+.activités_marseille_flex_child:last-child a:first-child {
+  /* Conteneur image 5 */
+  height: 45%;
+}
+
+.activités_marseille_flex_child:last-child a:last-child {
+  /* Conteneur image 6 */
+  height: calc(55% - 30px);
+}
+
+.activités_marseille_flex_child:last-child a:first-child img {
+  /* Image 5 */
+  height: 70% !important;
+}
+
+.activités_marseille_flex_child:last-child a:last-child img {
+  /* Image 6 */
+  height: 70% !important;
+}
+
+#activités_marseille_flex a:hover {
+  border: 2px solid #f2f2f2;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  margin-top: 50px;
+  background-color: #f2f2f2;
+  background-size: cover;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+}
+
+footer h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+footer p {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+#footer_contenu {
+  display: flex;
+  justify-content: flex-start;
+  gap: 200px;
+}
